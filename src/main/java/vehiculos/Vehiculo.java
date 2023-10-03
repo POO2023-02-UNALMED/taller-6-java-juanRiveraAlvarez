@@ -13,7 +13,7 @@ public class Vehiculo {
     private int  peso;
     private String traccion;
     private Fabricante fabricante;
-    public  static int CantidadVehiculos;
+    public  static int CantidadVehiculos=0;
     public static Map<String,Integer> tiposVehiculos = new HashMap<>();
     public static Map<Fabricante,Integer> ventasFabrica = new HashMap<>();
     
@@ -35,6 +35,7 @@ public class Vehiculo {
         }else{
             ventasFabrica.put(fabricante,1);
         }
+        CantidadVehiculos++;
     }
 
     public String getPlaca() {
